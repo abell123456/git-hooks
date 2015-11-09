@@ -1,12 +1,12 @@
-# f2egit-hook
+# git-hook
 install and uninstall git hooks for convenient
 让你更简单的定义git hooks。
 # 钩子组件使用
 ```javascript
-var gitHooks = require('@ali/f2egit-hook'),
+var gitHooks = require('git-hook'),
     fs = require('fs');
 
-f2egitHook.install('hint', 'pre-commit', function(hookPath) {
+gitHook.install('hint', 'pre-commit', function(hookPath) {
     fs.writeFileSync(hookPath + '.back', fs.readFileSync(hookPath));
 });
 ```
